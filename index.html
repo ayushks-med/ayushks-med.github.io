@@ -143,11 +143,46 @@
             color: var(--muted);
         }
 
+        .project-card {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 20px;
+            align-items: center;
+            max-width: 520px;
+            padding: 14px;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+        }
+
+        .project-card img {
+            display: block;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .project-card h3 {
+            margin: 0 0 6px;
+            font-size: 1.05rem;
+        }
+
+        .project-card p {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
         @media (max-width: 720px) {
             .page {
                 grid-template-columns: 1fr;
                 gap: 40px;
                 padding: 48px 24px;
+            }
+
+            .project-card {
+                grid-template-columns: 140px 1fr;
+                gap: 16px;
             }
         }
     </style>
@@ -207,6 +242,23 @@
                         <p class="entry-dates">November 2026 – Present</p>
                     </div>
                 </div>
+            </section>
+
+            <section id="projects">
+                <h2>Projects</h2>
+                <article class="project-card">
+                    <a href="https://ayushks-med.github.io/face-anatomy-viewer/" target="_blank" rel="noopener" aria-label="Open Face Anatomy Viewer">
+                        <img src="assets/images/face-anatomy.png" width="725" height="725" alt="3D head and face anatomy model">
+                    </a>
+                    <div>
+                        <h3>
+                            <a href="https://ayushks-med.github.io/face-anatomy-viewer/" target="_blank" rel="noopener">
+                                Face Anatomy Viewer
+                            </a>
+                        </h3>
+                        <p>Explore facial anatomy in an interactive 3D viewer.</p>
+                    </div>
+                </article>
             </section>
         </main>
 
